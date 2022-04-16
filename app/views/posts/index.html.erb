@@ -2,13 +2,15 @@
 
 <h1>Posts</h1>
 
-<div id="posts">
+<div id="posts" class="row row-cols-2">
   <% @posts.each do |post| %>
-    <%= render post %>
-    <p>
-      <%= link_to "Show this post", post %>
-    </p>
+    <div class="col">
+      <%= render post %>
+      <p>
+        <%= link_to "Show this post", post %>
+      </p>
+    </div>
   <% end %>
 </div>
 
-<%= link_to "New post", new_post_path %>
+<%= link_to "New post", new_post_path, class: 'btn btn-primary' %>

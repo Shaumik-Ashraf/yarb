@@ -8,30 +8,59 @@
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
+
   </head>
 
-  <body>
+  <body class="container-fluid">
     <div class="container">
-    <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
-      <a href="/" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none fs-2">
-        <i class="bi bi-gem text-danger"></i>
-      </a>
+      <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
+        <a href="/" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none fs-2">
+          <i class="bi bi-gem text-danger"></i>
+        </a>
 
-      <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
-        <li><a href="<%= root_url %>" class="nav-link px-2 link-secondary">Home</a></li>
-        <li><a href="<%= users_url %>" class="nav-link px-2 link-dark">Users</a></li>
-        <li><a href="<%= posts_url %>" class="nav-link px-2 link-dark">Posts</a></li>
-        <li><a href="#" class="nav-link px-2 link-dark">Readme</a></li>
-        <li><a href="#" class="nav-link px-2 link-dark">Server</a></li>
-      </ul>
+        <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+          <li><a href="<%= root_url %>" class="nav-link px-2 link-secondary">Home</a></li>
+          <li><a href="<%= users_url %>" class="nav-link px-2 link-dark">Users</a></li>
+          <li><a href="<%= posts_url %>" class="nav-link px-2 link-dark">Posts</a></li>
+          <li><a href="#" class="nav-link px-2 link-dark">Readme</a></li>
+          <li><a href="#" class="nav-link px-2 link-dark">Server</a></li>
+        </ul>
 
-      <div class="col-md-3 text-end">
-        <button type="button" class="btn btn-outline-primary me-2">Login</button>
-        <button type="button" class="btn btn-primary">Sign-up</button>
-      </div>
-    </header>
+        <div class="col-md-3 text-end">
+          <button type="button" class="btn btn-outline-primary me-2">Login</button>
+          <button type="button" class="btn btn-primary">Sign-up</button>
+        </div>
+      </header>
     </div>
 
     <%= yield %>
+
+	<div class="toast-container">
+	  <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+	    <div class="toast-header">
+	      <i class="bi bi-square-fill text-danger"></i>
+	      <strong class="me-auto">Bootstrap</strong>
+	      <small class="text-muted">just now</small>
+	      <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+	    </div>
+	    <div class="toast-body">
+	      See? Just like this.
+	    </div>
+	  </div>
+
+	  <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+	    <div class="toast-header">
+	      <i class="bi bi-square-fill text-success"></i>
+	      <strong class="me-auto">Bootstrap</strong>
+	      <small class="text-muted">just now</small>
+	      <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+	    </div>
+	    <div class="toast-body">
+	      Heads up, toasts will stack automatically
+	    </div>
+	  </div>
+	</div>
+
   </body>
 </html>
+

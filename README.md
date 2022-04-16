@@ -1,6 +1,16 @@
 # yarb
 Yet Another Rails Blog - for me to tool around with Ruby on Rails 7.
 
+## TODO
+ - improve README doc
+ - prettify
+ - fix Toasts stimulus controller for bootstrap
+   + make flash messages toasts
+ - devise
+ - cancan
+ - comment model and pubsub queues for real time comments
+ - delayed job
+
 ## Setup
  - rails 7
  - ruby 3
@@ -9,8 +19,6 @@ Yet Another Rails Blog - for me to tool around with Ruby on Rails 7.
  - sprockets
  - stimulusjs
  - hotwire turbo
- - TODO: devise
- - TODO: cancan
 
 ## Assets Bundling
 File _package.json_ should look like this for esbuild, bootstrap, turbo, and stimulus:

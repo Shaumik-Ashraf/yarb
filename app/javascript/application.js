@@ -4,3 +4,6 @@ import "./controllers"
 import * as bootstrap from "bootstrap"
 import "trix"
 import "@rails/actiontext"
+
+// Put bootstrap as window object
+window.bootstrap = bootstrap;
