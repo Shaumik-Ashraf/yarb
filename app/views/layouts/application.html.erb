@@ -8,10 +8,12 @@
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
+
   </head>
 
-  <body>
+  <body class="container-fluid">
     <div class="container">
+    <!-- todo: fix indenting -->
     <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
       <a href="/" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none fs-2">
         <i class="bi bi-gem text-danger"></i>
@@ -35,5 +37,33 @@
 	<div class="container">
       <%= yield %>
     </div>
+
+	<div class="toast-container">
+	  <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+	    <div class="toast-header">
+	      <i class="bi bi-square-fill text-danger"></i>
+	      <strong class="me-auto">Bootstrap</strong>
+	      <small class="text-muted">just now</small>
+	      <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+	    </div>
+	    <div class="toast-body">
+	      See? Just like this.
+	    </div>
+	  </div>
+
+	  <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+	    <div class="toast-header">
+	      <i class="bi bi-square-fill text-success"></i>
+	      <strong class="me-auto">Bootstrap</strong>
+	      <small class="text-muted">just now</small>
+	      <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+	    </div>
+	    <div class="toast-body">
+	      Heads up, toasts will stack automatically
+	    </div>
+	  </div>
+	</div>
+
   </body>
 </html>
+
