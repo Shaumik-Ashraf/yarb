@@ -1,22 +1,13 @@
-<div id="<%= dom_id post %>">
-  <p>
-    <strong>Title:</strong>
-    <%= post.title %>
-  </p>
+<div id="<%= dom_id post %>" class="container-fluid mb-2">
+  <h3 class="row"><%= post.title %></h3>
 
-  <p>
-    <strong>Body:</strong>
+  <div class="row">
+    <p class="text-muted">
+      Authored <%= post.created_at.strftime('%r %x') %> by <%= post.user.name %> | <%= link_to 'See more', post, class: 'text-success' %>
+    </p>
+  </div>
+
+  <div class="row">
     <%= post.body %>
-  </p>
-
-  <p>
-    <strong>Permanent:</strong>
-    <%= post.permanent %>
-  </p>
-
-  <p>
-    <strong>User:</strong>
-    <%= post.user_id %>
-  </p>
-
+  </div>
 </div>
