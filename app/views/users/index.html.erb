@@ -1,14 +1,21 @@
-<p style="color: green"><%= notice %></p>
 
-<h1>Users</h1>
+<div class="row justify-content-around mb-2">
+  <h1 class="col">Users</h1>
 
-<div id="users">
-  <% @users.each do |user| %>
-    <%= render user %>
-    <p>
-      <%= link_to "Show this user", user %>
-    </p>
-  <% end %>
+  <div class="col-lg-2 col-md-3 col-4 d-flex align-items-center">
+    <%= link_to "New user", new_user_path, class: 'btn btn-primary mx-auto' %>
+  </div>
 </div>
 
-<%= link_to "New user", new_user_path %>
+<div id="users" class="list-group">
+  <% @users.each do |user| %>
+    <% if user.admin %>
+      <a href="<%= user_url(user) %>" class="list-group-item list-group-item-action list-group-item-primary">
+		<%= user.name %>
+		<span class="badge bg-dark text-light mx-2">Admin<span>
+      </a>
+    <% else %>
+      <a href="<%= user_url(user) %>" class="list-group-item list-group-item-action list-group-item-info"><%= user.name %></a>
+    <% end %>
+  <% end %>
+</div>
