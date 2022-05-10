@@ -67,3 +67,7 @@ group :development do
   # gem "spring"
 end
 
+## Additional Gems
+
+# markdown rendering
+gem 'rdiscount'

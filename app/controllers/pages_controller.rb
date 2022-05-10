@@ -1,6 +1,6 @@
 class PagesController < ApplicationController
   def readme
-	@readme = File.read( Rails.root.join('README.md') )
+	@readme = RDiscount.new(File.read( Rails.root.join('README.md') )).to_html
   end
 
   def server
