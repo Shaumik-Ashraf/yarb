@@ -7,6 +7,8 @@ Yet Another Rails Blog - for me to tool around with Ruby on Rails 7.
  - fix Toasts stimulus controller for bootstrap
    + make flash messages toasts
  - devise
+   + g User
+   + ui
  - cancan
  - comment model and pubsub queues for real time comments
  - delayed job
@@ -19,6 +21,9 @@ Yet Another Rails Blog - for me to tool around with Ruby on Rails 7.
  - sprockets
  - stimulusjs
  - hotwire turbo
+
+## Todo Deploy
+ - add config.action\_mailer.default\_url\_options in config/environments/production.rb
 
 ## Assets Bundling
 File _package.json_ should look like this for esbuild, bootstrap, turbo, and stimulus:

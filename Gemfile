@@ -71,3 +71,13 @@ end
 
 # markdown rendering
 gem 'rdiscount'
+
+# authentication
+gem 'devise'
+
+# authorization
+#gem 'cancancan'
+
+# active jobs backend
+#gem 'delayed_job'
+
