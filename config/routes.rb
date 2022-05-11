@@ -1,11 +1,12 @@
 Rails.application.routes.draw do
-  devise_for :users
   get 'pages/readme'
   get 'pages/server'
 
   root 'posts#index'
 
-  resources :posts
-  resources :users
+  resources :posts 
+
+  devise_for :users
+  resources :users 
 
 end
