@@ -26,7 +26,9 @@ Yet Another Rails Blog - for me to tool around with Ruby on Rails 7.
  - add `config.action\_mailer.default\_url\_options` in config/environments/production.rb
  - create new secret key for production
 
-## Assets Bundling
+## Notes
+
+### Assets Bundling
 File _package.json_ should look like this for esbuild, bootstrap, turbo, and stimulus:
 ```json
 {
@@ -50,3 +52,14 @@ File _package.json_ should look like this for esbuild, bootstrap, turbo, and sti
 }
 ```
 Initial bug from `rails new ...` was fixed by running `rails css:install:bootstrap`, `rails javascript:install:esbuild`, `rails action_text:install`, `rails stimulus:install`, `rails turbo:install`, and then deleting the line `import controllers` from _application.js_.
+
+### Adding Back Rails UJS
+This is required for having `data-*` attributes in `link_to` helper.
+1. yarn add @rails/ujs
+2. In app/javascript/application.js add the lines:
+```js
+import Rails from "@rails/ujs";
+Rails.start();
+```
+3. Recompile assets (esbuild setup): `rails assets:precompile`
+  - Possible alternative for importmap: (https://stackoverflow.com/a/70769655)[https://stackoverflow.com/a/70769655]
