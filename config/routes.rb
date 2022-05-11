@@ -9,6 +9,6 @@ Rails.application.routes.draw do
   devise_for :users, controllers: {
   	registrations: 'users/registrations'
   }
-  resources :users 
+  resources :users # POST /users is overriden by devise
 
 end

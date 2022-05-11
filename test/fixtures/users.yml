@@ -1,9 +1,23 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
+# Remove real user fixtures for now because of Devise password_enc column
+#one:
+#  name: MyString1
+#  admin: false
+#  email: MyEmail1@example.com
+#  password: MyPassword1
+#  password_confirmation: MyPassword1
+#
+#two:
+#  name: MyString2
+#  admin: false
+#  email: MyEmail2@example.com
+#  password: MyPassword2
+#  password_confirmation: MyPassword2
+
+# Faux user fixture for post forign key
 one:
   name: MyString1
   admin: false
-
-two:
-  name: MyString2
-  admin: false
+  email: MyEmail1@example.com
+  encrypted_password: FakeEnc

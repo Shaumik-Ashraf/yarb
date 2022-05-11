@@ -2,7 +2,8 @@ require "test_helper"
 
 class UsersControllerTest < ActionDispatch::IntegrationTest
   setup do
-    @user = users(:one)
+  	p = SecureRandom.base58
+    @user = User.create(name: "TestC", email: "testc@yarb.com", password: p, password_confirmation: p)
   end
 
   test "should get index" do
@@ -17,10 +18,12 @@ class UsersControllerTest < ActionDispatch::IntegrationTest
 
   test "should create user" do
     assert_difference("User.count") do
-      post users_url, params: { user: { admin: @user.admin, name: @user.name } }
+      p = SecureRandom.base58
+      post users_url, params: { user: { name: "TestA", email: "testa@yarb.com", password: p, password_confirmation: p } }
     end
 
-    assert_redirected_to user_url(User.last)
+    #assert_redirected_to user_url(User.last)
+    assert_redirected_to root_url # by Devise
   end
 
   test "should show user" do

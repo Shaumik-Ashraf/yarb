@@ -62,4 +62,4 @@ import Rails from "@rails/ujs";
 Rails.start();
 ```
 3. Recompile assets (esbuild setup): `rails assets:precompile`
-  - Possible alternative for importmap: (https://stackoverflow.com/a/70769655)[https://stackoverflow.com/a/70769655]
+  - Possible alternative for importmap: [https://stackoverflow.com/a/70769655]

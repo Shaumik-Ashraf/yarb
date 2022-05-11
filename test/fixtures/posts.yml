@@ -8,4 +8,4 @@ one:
 two:
   title: MyString
   permanent: false
-  user: two
+  user: one
