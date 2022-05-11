@@ -23,7 +23,8 @@ Yet Another Rails Blog - for me to tool around with Ruby on Rails 7.
  - hotwire turbo
 
 ## Todo Deploy
- - add config.action\_mailer.default\_url\_options in config/environments/production.rb
+ - add `config.action\_mailer.default\_url\_options` in config/environments/production.rb
+ - create new secret key for production
 
 ## Assets Bundling
 File _package.json_ should look like this for esbuild, bootstrap, turbo, and stimulus:
