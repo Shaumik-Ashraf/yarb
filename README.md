@@ -5,12 +5,10 @@ Yet Another Rails Blog - for me to tool around with Ruby on Rails 7.
  - improve README doc
  - prettify
  - fix Toasts stimulus controller for bootstrap
-   + make flash messages toasts
  - devise
-   + g User
    + ui
  - cancan
- - comment model and pubsub queues for real time comments
+ - comment model and pubsub queues for real time comments via hotwire
  - delayed job
 
 ## Setup
