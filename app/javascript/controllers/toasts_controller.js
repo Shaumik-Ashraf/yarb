@@ -4,10 +4,18 @@ import * as bootstrap from "bootstrap"
 export default class extends Controller {
 
   connect() {
-	console.log('Toasts Controller!');
-	var toastElList = [].slice.call(document.querySelectorAll('.toast'));
-	var toastList = toastElList.map(function (toastEl) {
-	  return new bootstrap.Toast(toastEl, option);
+	this.element.classList.add("fadein");
+	this.element.classList.add("show");
+	this.element.classList.remove("hide");
+
+	function delay(time) {
+	  return new Promies((resolve) => setTimeout(resolve, time));
+	}
+
+
+	delay(this.element.dataset.bsDelay).then(() => {
+		this.element.classList.add("hide");
+		this.element.classList.remove("show");
 	});
   }
 

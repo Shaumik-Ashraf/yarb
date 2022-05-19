@@ -4,7 +4,9 @@
 
 <div id="posts" class="row row-cols-lg-auto g-2">
   <% @posts.each do |post| %>
-    <%= render post %>
+    <div class="col">
+      <%= render post %>
+    </div>
   <% end %>
   <hr />
 </div>

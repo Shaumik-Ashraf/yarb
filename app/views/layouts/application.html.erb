@@ -9,6 +9,12 @@
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
 
+	<script type="text/javascript" defer>
+		var toastElList = [].slice.call(document.querySelectorAll('.toast'))
+		var toastList = toastElList.map(function (toastEl) {
+		  return new bootstrap.Toast(toastEl, option)
+		})
+	</script>
   </head>
 
   <body class="container-fluid">
@@ -43,30 +49,10 @@
       <%= yield %>
     </div>
 
-	<div class="toast-container">
-	  <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
-	    <div class="toast-header">
-	      <i class="bi bi-square-fill text-danger"></i>
-	      <strong class="me-auto">Bootstrap</strong>
-	      <small class="text-muted">just now</small>
-	      <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
-	    </div>
-	    <div class="toast-body">
-	      See? Just like this.
-	    </div>
-	  </div>
-
-	  <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
-	    <div class="toast-header">
-	      <i class="bi bi-square-fill text-success"></i>
-	      <strong class="me-auto">Bootstrap</strong>
-	      <small class="text-muted">just now</small>
-	      <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
-	    </div>
-	    <div class="toast-body">
-	      Heads up, toasts will stack automatically
-	    </div>
-	  </div>
+	<div id="toasts" class="toast-container position-fixed bottom-0 end-0 p-3" style="z-index: 10">
+	  <% flash.each do |header, message| %>
+		<%= render "shared/toast", title: header, message: message %>
+	  <% end %>
 	</div>
 
   </body>
