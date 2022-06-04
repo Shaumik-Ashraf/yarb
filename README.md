@@ -2,14 +2,11 @@
 Yet Another Rails Blog - for me to tool around with Ruby on Rails 7.
 
 ## TODO
- - improve README doc
- - prettify
  - fix Toasts stimulus controller for bootstrap
- - devise
-   + ui
  - cancan
  - comment model and pubsub queues for real time comments via hotwire
  - delayed job
+ - improve README doc
 
 ## Setup
  - rails 7
