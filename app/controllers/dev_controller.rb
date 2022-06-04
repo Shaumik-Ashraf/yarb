@@ -6,8 +6,10 @@ class DevController < ApplicationController
   end
 
   def mock_mailer
+    head :unimplemented
   end
 
   def mock_stream
+    head :unimplemented
   end
 end
