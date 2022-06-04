@@ -9,7 +9,7 @@ export default class extends Controller {
 	this.element.classList.remove("hide");
 
 	function delay(time) {
-	  return new Promies((resolve) => setTimeout(resolve, time));
+	  return new Promise((resolve) => setTimeout(resolve, time));
 	}
 
 
