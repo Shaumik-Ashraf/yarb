@@ -2,7 +2,7 @@
   <%= link_to "New post", new_post_path, class: 'btn btn-primary' %>
 </div>
 
-<div id="posts" class="row row-cols-lg-auto g-2">
+<div id="posts" class="row row-cols-lg-auto g-2 justify-content-around">
   <% @posts.each do |post| %>
     <div class="col">
       <%= render post %>
