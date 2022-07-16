@@ -1,8 +1,13 @@
 # yarb
 Yet Another Rails Blog - for me to tool around with Ruby on Rails 7.
 
+## Quickstart
+```
+./bin/setup
+./bin/dev
+```
+
 ## TODO
- - fix Toasts stimulus controller for bootstrap
  - cancan
  - comment model and pubsub queues for real time comments via hotwire
  - delayed job
