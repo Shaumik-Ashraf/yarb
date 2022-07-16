@@ -4,7 +4,9 @@ import * as bootstrap from "bootstrap"
 export default class extends Controller {
 
   connect() {
-	this.element.classList.add("fadein");
+	console.log("Stimulus ToastController connected!")
+
+	//this.element.classList.add("fadein");
 	this.element.classList.add("show");
 	this.element.classList.remove("hide");
 
